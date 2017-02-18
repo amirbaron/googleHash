@@ -1,6 +1,4 @@
 # RCLH
-import struct
-
 
 def pizzaParser(fileName):
     # type str -> (int, int, int, int, int[][])
