@@ -16,6 +16,7 @@ def video_parser(fileName):
     X = int(X)
     content = content[1:]
     videos = content[0].split()
+    videos = [int(i) for i in videos]
     content = content[1:]
     Ldarr = []
     Mec = [[-1 for c in range(C)] for e in range(E)]
@@ -41,6 +42,11 @@ def video_parser(fileName):
 
     return V, E, R, C, X, videos, Ldarr, Mec, Rev
 
+
+def video_solver(V, E, R, C, X, videos, Ldarr, Mec, Rev):
+    def by_max_request():
+        pass
+
 def main():
     sys.setrecursionlimit(100500)
     V, E, R, C, X, videos, Ldarr, Mec, Rev = video_parser('input.txt')
@@ -53,7 +59,6 @@ def main():
     print Ldarr
     print Mec
     print Rev
-
-
+    video_solver(V, E, R, C, X, videos, Ldarr, Mec, Rev)
 if __name__ == "__main__":
     main()
